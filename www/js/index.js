@@ -19,28 +19,30 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.addEventListener('deviceready', this.loadComic(), false);
     },
 
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-    },
+    loadComic: function() {
+        // this.receivedEvent('deviceready');
+        window.location="http://plundercomic.com";
+        console.log("hello moto");
+    }
 
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
+    // receivedEvent: function(id) {
+    //     var parentElement = document.getElementById(id);
+    //     var listeningElement = parentElement.querySelector('.listening');
+    //     var receivedElement = parentElement.querySelector('.received');
+    //
+    //     listeningElement.setAttribute('style', 'display:none;');
+    //     receivedElement.setAttribute('style', 'display:block;');
+    //
+    //     console.log('Received Event: ' + id);
+    // }
 };
 
 app.initialize();
