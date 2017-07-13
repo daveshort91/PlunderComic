@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.loadComic(), false);
+
     },
 
     // deviceready Event Handler
@@ -28,8 +29,17 @@ var app = {
     // 'pause', 'resume', etc.
     loadComic: function() {
         // this.receivedEvent('deviceready');
-        window.location="http://plundercomic.com";
         console.log("hello moto");
+        // window.location="http://plundercomic.com";
+        var val = document.getElementById('imagename').value,
+                src = 'http://webpage.com/images/' + val +'.png',
+                img = document.createElement('img');
+
+            img.src = src;
+            document.body.appendChild(img);
+        window.screen.orientation.lock('landscape-primary');
+        console.log('Orientation is ' + screen.orientation.type);
+
     }
 
     // Update DOM on a Received Event

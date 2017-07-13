@@ -15,7 +15,14 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.example.hello"
+        },
+        "cordova-plugin-screen-orientation": {
+            "PACKAGE_NAME": "com.example.hello"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.example.hello"
+        }
+    }
 }

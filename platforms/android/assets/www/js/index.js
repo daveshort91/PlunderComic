@@ -28,8 +28,11 @@ var app = {
     // 'pause', 'resume', etc.
     loadComic: function() {
         // this.receivedEvent('deviceready');
-        window.location="http://plundercomic.com";
         console.log("hello moto");
+        // window.location="http://plundercomic.com";
+        window.screen.orientation.lock('landscape-primary');
+        console.log('Orientation is ' + screen.orientation.type);
+
     }
 
     // Update DOM on a Received Event
